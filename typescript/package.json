@@ -1,0 +1,40 @@
+{
+  "name": "openharness",
+  "version": "0.1.0",
+  "description": "A self-hosted SDK for building AI agents: tools, structured output, memory, sessions, streaming, guardrails, tracing, MCP and multi-agent, across OpenAI, Anthropic, Gemini and OpenAI-compatible models.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "openharness": "./dist/cli.js"
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test test/core.test.mjs test/providers.test.mjs test/mcp-cli.test.mjs",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": ["ai", "agents", "llm", "sdk", "mcp", "openai", "anthropic", "gemini", "ollama"],
+  "author": "Sam Naz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nazsam/open-harness.git",
+    "directory": "typescript"
+  },
+  "homepage": "https://nazsam.github.io/open-harness/",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
