@@ -1,0 +1,25 @@
+title: open-harness
+description: A self-hosted SDK for building AI agents in Python and TypeScript.
+remote_theme: just-the-docs/just-the-docs@v0.12.0
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+url: https://nazsam.github.io
+baseurl: /open-harness
+color_scheme: light
+search_enabled: true
+heading_anchors: true
+enable_copy_code_button: true
+aux_links:
+  GitHub: https://github.com/nazsam/open-harness
+aux_links_new_tab: true
+back_to_top: true
+back_to_top_text: "Back to top"
+footer_content: "open-harness is MIT licensed. Built by Sam Naz."
+callouts:
+  note:
+    title: Note
+    color: blue
+  warning:
+    title: Warning
+    color: yellow
